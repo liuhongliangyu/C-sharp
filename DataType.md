@@ -71,7 +71,7 @@ C#中字符型是用单引号标识的，且只能包含一个，比如： 'a' �
 
 在定义变量的时候，我们就要用到之前学习的数据类型了。
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
@@ -86,7 +86,7 @@ class Demo
 
 其中，int 为数据类型，number为我们自定义的变量名，10则是给这个变量的初始化值。那么如何“变”呢？我们可以继续往下写：
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
@@ -104,7 +104,7 @@ class Demo
 
 除了int类型，还有很多其他的类型，大家应该一一尝试并可以做到熟练定义各种类型的变量。代码举例：
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
@@ -148,13 +148,13 @@ class Demo
 
 **注意5：浮点型变量在保留位数上有需要注意的地方，比如float为保留7位有效数字，这7位包括小数点前后的数字，举例如下：**
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
   {
     float f1 = 1234.56789f;
-    double d1 = 1234.56789
+    double d1 = 1234.56789;
     System.Console.WriteLine(f1); //有效数字是7位，结果为1234.568，最后一位小数会四舍五入
     System.Console.WriteLine(d1);  //有效数字是15~16位，都会保留下来。
   }
@@ -174,7 +174,7 @@ class Demo
 在C#中我们可以自定义值无法被改变的常量，格式如下：
 * const 数据类型 名称 = 初始化值
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
@@ -217,7 +217,7 @@ Hello、Hello_World、HelloWorld、Demo1
 在程序运行过程中一定少不了数据的运算，而由于数据的类型多样，也经常会遇到需要运算的数据类型不一致，这时候就会出现类型转换，将数据类型转换成一致，也就是类型转换。
 
 ### 自动类型提升
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
@@ -242,7 +242,7 @@ class Demo
 
 ### 强制类型转换
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
@@ -255,7 +255,7 @@ class Demo
 ```
 在上述例子中，变量a为int类型占4字节，b和c为sbyte类型占1字节。实际当a和b做运算时，b会自动类型提升为int类型，使得最后结果为int类型。可是变量c的类型与最后结果的类型不统一，无法将占用4字节的int类型7赋值给占用1字节的sbyte类型c，所以代码会直接报错。如何解决呢？我们可以使用强制类型转换，如下：
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
@@ -272,7 +272,7 @@ class Demo
 
 ### 字符类型运算
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
@@ -293,7 +293,7 @@ C# 中使用的是Unicode码表。当字符型数据参与数值型运算时，�
 
 ### 字符串与变量结合输出及占位符
 
-```sh
+```C#
 class OutputDemo
 {
   public static void Main(string[] args)
@@ -332,7 +332,7 @@ class OutputDemo
 ```
 C# 中还可以使用占位符的形式对数据进行输出，比如上述例子中使用占位符输出同样的效果：
 
-```sh
+```C#
 class OutputDemo
 {
   public static void Main(string[] args)
@@ -352,7 +352,7 @@ class OutputDemo
 我们可以在控制台中使用特定的函数在键盘上输入一定的内容：System.Console.ReadLine();
 默认在控制台上输入的内容全都是字符串类型，有时候我们需要把字符串类型转化成int类型去做数值型的运算。我们可以使用System.Convert.ToInt32()函数将字符串类型的数字转换成int类型
 
-```sh
+```C#
 class Demo
 {
   public static void Main(string[] args)
